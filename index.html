@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated User Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="user hide_details" id="userBox">
+        <img src="./user.jpg" onclick="openInfo()">
+        <div class="info">
+            <h1>John Doe</h1>
+            <p>Working as a <span>Software Developer</span></p>
+            <p>From: California, USA</p>
+            <a href="#">Connect  me</a>
+        </div>
+        <div class="close_icon" onclick="closeInfo()"></div>
+
+    </div>
+
+    <script>
+        const userBox = document.getElementById('userBox');
+
+        function openInfo(){
+            userBox.classList.remove('hide_details');
+        }
+        function closeInfo(){
+            userBox.classList.add('hide_details');
+        }
+
+    </script>
+</body>
+</html>
